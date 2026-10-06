@@ -1,4 +1,4 @@
-g<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,26 +12,25 @@ g<!DOCTYPE html>
   <!-- MEMBER 4: HEADER goes here -->
 <header>
   <h1>TeamCode</h1>
-  <nav>
-    <li><a href="hero">Home</a></li>
-    <li><a href="about">About</a></li>
-    <li><a href="team">Team</a></li>
-    <li><a href="contact">Contact</a></li>
-
-
-</nav>
-
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-
-  <section class="hero">
+  <main>
+    <section class="hero" id="hero">
     <h1>We build things, with</h1>
     <p>A four-member team learning Full-Stack Software Development with Git & <br>GitHub Collaboration</p>
 
     <button class="meet-team">Meet the Team</button>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <h4>About the Project</h4>
 
     <div class="about-content">
@@ -50,7 +49,7 @@ g<!DOCTYPE html>
     </div>
   </section>
 
-  <section class="team">
+  <section class="team" id="team">
     <h4>Our Team</h4>
     <div class="member">
       <h6>Member 1</h6>
@@ -65,7 +64,7 @@ g<!DOCTYPE html>
     <div class="member">
       <h6>Member 3</h6>
       <p>JavaScript Developer</p>
-    </div >
+    </div>
 
     <div class="member">
       <h6>Member 4</h6>
@@ -73,7 +72,7 @@ g<!DOCTYPE html>
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <h4>Contact Us</h4>
 
     <form action="submit">
@@ -90,12 +89,14 @@ g<!DOCTYPE html>
     </form>
 
   </section>
+  </main>
+
   <!-- MEMBER 4: FOOTER goes here -->
-   <nav>
-    <p>&copy 2026 TeamCode.All rights reserved.</p>
-    <p>COSC 32133/BECS 32263.University Of Kelaniya</p>
-    <a href="hero">Back to top</a>
-   </nav>
+  <footer>
+    <p>&copy; 2026 TeamCode. All rights reserved.</p>
+    <p>COSC 32133 / BECS 32263 / University of Kelaniya</p>
+    <a href="#hero">Back to top</a>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
