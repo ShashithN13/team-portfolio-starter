@@ -33,6 +33,20 @@ function typeEffect() {
 
 typeEffect();
 
+const pageSections = Array.from(document.querySelectorAll("main > section[id]"));
+
+function showCurrentSection() {
+  const requestedId = window.location.hash.slice(1);
+  const activeSection = pageSections.find((section) => section.id === requestedId) || pageSections[0];
+
+  pageSections.forEach((section) => {
+    section.hidden = section !== activeSection;
+  });
+}
+
+window.addEventListener("hashchange", showCurrentSection);
+showCurrentSection();
+
 const themeToggle = document.getElementById("themeToggle");
 
 themeToggle.addEventListener("click", () => {
@@ -44,3 +58,34 @@ themeToggle.addEventListener("click", () => {
         themeToggle.textContent = "🌙";
     }
 });
+
+    const contactForm = document.querySelector(".contact form");
+
+    if (contactForm) {
+      const requiredFields = Array.from(contactForm.querySelectorAll("[required]"));
+      contactForm.noValidate = true;
+
+      function validateField(field) {
+        const label = field.labels[0]?.textContent.trim() || "This field";
+
+        if (!field.value.trim()) {
+          field.setCustomValidity(`${label} is required.`);
+        } else if (field.type === "email" && field.validity.typeMismatch) {
+          field.setCustomValidity("Please enter a valid email address.");
+        } else {
+          field.setCustomValidity("");
+        }
+      }
+
+      requiredFields.forEach((field) => {
+        field.addEventListener("input", () => validateField(field));
+      });
+
+      contactForm.addEventListener("submit", (event) => {
+        requiredFields.forEach(validateField);
+
+        if (!contactForm.reportValidity()) {
+          event.preventDefault();
+        }
+      });
+    }
