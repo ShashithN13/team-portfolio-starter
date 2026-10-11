@@ -196,6 +196,11 @@ nav ul li a:hover {
 #with-span {
     color: #51258f;
 }
+#form-message {
+    color: #198754;
+    font-size: 12px;
+    margin-top: 4px;
+}
 
 .hero .meet-team,
 .meet-team {

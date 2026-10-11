@@ -70,10 +70,20 @@ themeToggle.addEventListener("click", () => {
       });
 
       contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
         requiredFields.forEach(validateField);
 
         if (!contactForm.reportValidity()) {
-          event.preventDefault();
+          return;
         }
+
+        const submittedName = contactForm.elements.name.value.trim();
+        const successMessage = contactForm.querySelector("#form-message");
+
+        if (successMessage) {
+          successMessage.textContent = `Thanks, ${submittedName}! Your message was sent.`;
+        }
+
+        contactForm.reset();
       });
     }
