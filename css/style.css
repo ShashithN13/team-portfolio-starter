@@ -417,6 +417,20 @@ nav ul li a:hover {
         box-shadow var(--transition);
 }
 
+
+.hero .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+body {
+    background: white;
+    color: black;
+}
+
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
 .contact input {
     min-height: 37px;
 }
@@ -834,6 +848,4 @@ header > nav > ul > li > a {
 header > nav > ul > li > a:hover {
     color: #e4d5ff;
 }
-
-
 
