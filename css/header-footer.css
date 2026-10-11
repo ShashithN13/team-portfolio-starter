@@ -1,1 +1,30 @@
 /* MEMBER 4: header, navigation and footer styles */
+
+header {
+    background-color: #51258f;
+    color: #ffffff;
+}
+
+footer {
+    padding: 22px 20px;
+    text-align: center;
+
+    color: #eeeeF5;
+    background-color: var(--footer-background);
+
+    font-size: 11px;
+}
+
+footer p {
+    margin: 3px 0;
+    line-height: 1.8;
+}
+
+footer a {
+    color: #c9a5ff;
+    transition: color var(--transition);
+}
+
+footer a:hover {
+    color: #ffffff;
+}
