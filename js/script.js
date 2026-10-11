@@ -35,18 +35,6 @@ typeEffect();
 
 const pageSections = Array.from(document.querySelectorAll("main > section[id]"));
 
-function showCurrentSection() {
-  const requestedId = window.location.hash.slice(1);
-  const activeSection = pageSections.find((section) => section.id === requestedId) || pageSections[0];
-
-  pageSections.forEach((section) => {
-    section.hidden = section !== activeSection;
-  });
-}
-
-window.addEventListener("hashchange", showCurrentSection);
-showCurrentSection();
-
 const themeToggle = document.getElementById("themeToggle");
 
 themeToggle.addEventListener("click", () => {

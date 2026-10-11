@@ -189,6 +189,14 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
+#write-typing-effect {
+    color: #51258f;
+}
+
+#with-span {
+    color: #51258f;
+}
+
 .hero .meet-team,
 .meet-team {
     display: inline-block;
